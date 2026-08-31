@@ -1,0 +1,32 @@
+// Dart Basic
+
+mixin Kemampuan{
+  var lari = 30;
+}
+
+class Mamalia{
+  void menyusui(){
+    print("Bisa menyusui..");
+  }
+}
+ 
+class Orang extends Mamalia with Kemampuan{
+  String name;
+  int age;
+  
+  Orang({required this.name, required this.age});
+}
+
+void main(){
+  var orang1 = new Orang(name: "Fitri", age: 60);
+  print(orang1.name);
+  print(orang1.age);
+  orang1.menyusui();
+  
+  var orang2 = new Orang(age: 50,name: "Juni");
+  print(orang2.name);
+  print(orang2.age);
+  print(orang2.lari);
+  
+  
+}
