@@ -1,39 +1,42 @@
 import 'package:flutter/material.dart';
-void main(){
+
+main(){
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context){ 
+  Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold( 
-        body: Center(
-          child: Text(
-            "HALOsewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwerrrrrrrrrrrrrrrrr",
-            maxLines: 3,
-            overflow: TextOverflow.ellipsis,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              backgroundColor: Colors.amber,
-              color: Colors.black,
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 10,
-              fontFamily: 'Stick',
-              decorationStyle: TextDecorationStyle.wavy,
-              decoration: TextDecoration.lineThrough,
-              decorationColor: Colors.white,
-              decorationThickness: 2,
-            )
-          ),
-        ),
+      home: Scaffold(
         appBar: AppBar(
-          title: Text("My Apps"),
+          title: Text("Stack"),
         ),
-      ), 
+        body: Stack(
+          children: [
+            Container(
+              height: 400,
+              width: 400,
+              color: Colors.green,
+            ),
+            Container(
+              height: 300,
+              width: 300,
+              color: Colors.blue,
+            ),
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.amber,
+            ),
+            Container(
+              height: 100,
+              width: 100,
+              color: Colors.red,
+            ),
+          ],
+        ),
+      ),
     );
-
   }
 }
