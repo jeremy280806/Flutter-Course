@@ -1,15 +1,43 @@
 import 'package:flutter/material.dart';
 
+<<<<<<< HEAD
+void main(){
+=======
 main(){
+>>>>>>> main
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+<<<<<<< HEAD
+  final List<Color> myColors = [
+    Colors.red, 
+    Colors.green, 
+    Colors.blue, 
+    Colors.amber
+  ];
+
+  final List <Widget> myList = List.generate(100, (index) => Text(
+    "${index + 1}",
+    style: TextStyle(
+      fontSize: 20 + double.parse(index.toString()),
+    ),
+    ),
+  );
+  
+=======
+>>>>>>> main
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+<<<<<<< HEAD
+          title: Text("List View"),
+        ),
+        body: ListView(
+          children: myList,
+=======
           title: Text("Stack"),
         ),
         body: Stack(
@@ -35,6 +63,7 @@ class MyApp extends StatelessWidget {
               color: Colors.red,
             ),
           ],
+>>>>>>> main
         ),
       ),
     );
