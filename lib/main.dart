@@ -1,69 +1,76 @@
 import 'package:flutter/material.dart';
 
-<<<<<<< HEAD
 void main(){
-=======
-main(){
->>>>>>> main
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-<<<<<<< HEAD
-  final List<Color> myColors = [
-    Colors.red, 
-    Colors.green, 
-    Colors.blue, 
-    Colors.amber
-  ];
-
-  final List <Widget> myList = List.generate(100, (index) => Text(
-    "${index + 1}",
-    style: TextStyle(
-      fontSize: 20 + double.parse(index.toString()),
-    ),
-    ),
-  );
-  
-=======
->>>>>>> main
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-<<<<<<< HEAD
-          title: Text("List View"),
+          title: Text("List Tile"),
         ),
         body: ListView(
-          children: myList,
-=======
-          title: Text("Stack"),
-        ),
-        body: Stack(
           children: [
-            Container(
-              height: 400,
-              width: 400,
-              color: Colors.green,
+            ListTile(
+              contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+              title: Text("Sandhika Rahardi"),
+              subtitle: Text("This is subtitle okay............................................................", 
+              maxLines: 2, overflow: TextOverflow.ellipsis,),
+              leading: CircleAvatar(),
+              trailing: Text("10:10 PM"),
+              // tileColor: Colors.amber,
+              // dense: true,
+              onTap: (){
+                return;
+              },
             ),
-            Container(
-              height: 300,
-              width: 300,
-              color: Colors.blue,
+            Divider(),
+            ListTile(
+              title: Text("Sandhika Rahardi"),
+              subtitle: Text("This is subtitle okay.."),
+              leading: CircleAvatar(),
+              trailing: Text("10:10 PM"),
             ),
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.amber,
+            Divider(
+              color: Colors.black,
             ),
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.red,
+            ListTile(
+              title: Text("Sandhika Rahardi"),
+              subtitle: Text("This is subtitle okay.."),
+              leading: CircleAvatar(),
+              trailing: Text("10:10 PM"),
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+            ListTile(
+              title: Text("Sandhika Rahardi"),
+              subtitle: Text("This is subtitle okay.."),
+              leading: CircleAvatar(),
+              trailing: Text("10:10 PM"),
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+            ListTile(
+              title: Text("Sandhika Rahardi"),
+              subtitle: Text("This is subtitle okay.."),
+              leading: CircleAvatar(),
+              trailing: Text("10:10 PM"),
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+            ListTile(
+              title: Text("Sandhika Rahardi"),
+              subtitle: Text("This is subtitle okay.."),
+              leading: CircleAvatar(),
+              trailing: Text("10:10 PM"),
             ),
           ],
->>>>>>> main
         ),
       ),
     );
